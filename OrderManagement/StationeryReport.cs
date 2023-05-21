@@ -4,21 +4,21 @@ using System.Text;
 
 namespace OrderManagement
 {
-    class StationaryReport : Order
+    class StationeryReport : Order
     {
 
         public int tableWidth = 20;
-        public StationaryReport(string customerName, string customerAddress, string orderDueDate, List<Stationary> stationary)
+        public StationeryReport(string customerName, string customerAddress, string orderDueDate, List<Stationery> stationery)
         {
             base.CustomerName = customerName;
             base.CustomerAddress = customerAddress;
             base.OrderDueDate = orderDueDate;
-            base.OrderedItems = stationary;
+            base.OrderedItems = stationery;
         }
 
         public override void GenerateReport()
         {
-            Console.WriteLine("\nYour stationary report has been generated: ");
+            Console.WriteLine("\nYour stationery report has been generated: ");
             Console.WriteLine(base.ToString());
             generateTable();
         }

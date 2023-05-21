@@ -7,12 +7,12 @@ namespace OrderManagement
     class InvoiceReport : Order
     {
         public int tableWidth = 75;
-        public InvoiceReport(string customerName, string customerAddress, string orderDueDate, List<Stationary> stationary)
+        public InvoiceReport(string customerName, string customerAddress, string orderDueDate, List<Stationery> stationery)
         {
             base.CustomerName = customerName;
             base.CustomerAddress = customerAddress;
             base.OrderDueDate = orderDueDate;
-            base.OrderedItems = stationary;
+            base.OrderedItems = stationery;
         }
 
         public override void GenerateReport()

@@ -10,7 +10,7 @@ namespace OrderManagement
         public string CustomerAddress { get; set; }
         public string OrderDueDate { get; set; }
         public int OrderNumber { get; set; }
-        public List<Stationary> OrderedItems { get; set; }
+        public List<Stationery> OrderedItems { get; set; }
 
         public abstract void GenerateReport();
         public string ToString()

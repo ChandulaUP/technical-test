@@ -14,9 +14,12 @@ namespace OrderManagement
 
             InvoiceReport(customerName, customerAddress, orderDueDate, orderedItems);
 
-            StationaryReport(customerName, customerAddress, orderDueDate, orderedItems);
+            StationeryReport(customerName, customerAddress, orderDueDate, orderedItems);
 
             ColorReport(customerName, customerAddress, orderDueDate, orderedItems);
+
+            Console.WriteLine("Press any key to continue . . .");
+            Console.ReadKey();
         }
 
         public static Marker OrderMarkerInput()
@@ -70,21 +73,21 @@ namespace OrderManagement
             return input;
         }
 
-        private static void ColorReport(string customerName, string customerAddress, string orderDueDate, List<Stationary> orderedStationary)
+        private static void ColorReport(string customerName, string customerAddress, string orderDueDate, List<Stationery> orderedStationery)
         {
-            ColorReport colorReport = new ColorReport(customerName, customerAddress, orderDueDate, orderedStationary);
+            ColorReport colorReport = new ColorReport(customerName, customerAddress, orderDueDate, orderedStationery);
             colorReport.GenerateReport();
         }
 
-        private static void StationaryReport(string customerName, string customerAddress, string orderDueDate, List<Stationary> orderedStationary)
+        private static void StationeryReport(string customerName, string customerAddress, string orderDueDate, List<Stationery> orderedStationery)
         {
-            StationaryReport stationaryReport = new StationaryReport(customerName, customerAddress, orderDueDate, orderedStationary);
-            stationaryReport.GenerateReport();
+            StationeryReport stationeryReport = new StationeryReport(customerName, customerAddress, orderDueDate, orderedStationery);
+            stationeryReport.GenerateReport();
         }
 
-        private static void InvoiceReport(string customerName, string customerAddress, string orderDueDate, List<Stationary> orderedStationary)
+        private static void InvoiceReport(string customerName, string customerAddress, string orderDueDate, List<Stationery> orderedStationery)
         {
-            InvoiceReport invoiceReport = new InvoiceReport(customerName, customerAddress, orderDueDate, orderedStationary);
+            InvoiceReport invoiceReport = new InvoiceReport(customerName, customerAddress, orderDueDate, orderedStationery);
             invoiceReport.GenerateReport();
         }
 
@@ -99,13 +102,13 @@ namespace OrderManagement
             return (customerName, customerAddress, orderDueDate);
         }
 
-        private static List<Stationary> CustomerOrderInput()
+        private static List<Stationery> CustomerOrderInput()
         {
             Marker marker = OrderMarkerInput();
             Pen pen = OrderPenInput();
             Pencil pencil = OrderPencilInput();
 
-            var orderedItems = new List<Stationary>();
+            var orderedItems = new List<Stationery>();
             orderedItems.Add(marker);
             orderedItems.Add(pen);
             orderedItems.Add(pencil);

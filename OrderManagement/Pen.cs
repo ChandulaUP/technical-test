@@ -6,14 +6,14 @@ using System.Xml.Linq;
 
 namespace OrderManagement
 {
-    class Pen : Stationary
+    class Pen : Stationery
     {
 
         public int PenPrice = 2;
 
         public Pen(int numberOfBluePens, int numberOfBlackPens, int numberOfRedPens)
         {
-            StationaryType = "Pen";
+            StationeryType = "Pen";
             base.Price = PenPrice;
             AdditionalCharge = 1;
             base.NumberOfBlueItems = numberOfBluePens;

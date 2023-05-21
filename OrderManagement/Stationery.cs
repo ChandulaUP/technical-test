@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OrderManagement
 {
-    abstract class Stationary
+    abstract class Stationery
     {
-        public string StationaryType { get; set; }
+        public string StationeryType { get; set; }
         public int Price { get; set; }
         public int AdditionalCharge { get; set; }
         public int NumberOfBlueItems { get; set; }

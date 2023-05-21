@@ -6,12 +6,12 @@ using System.Xml.Linq;
 
 namespace OrderManagement
 {
-    class Marker : Stationary
+    class Marker : Stationery
     {
         public int markerPrice = 3;
         public Marker(int blue, int black, int red)
         {
-            StationaryType = "Marker";
+            StationeryType = "Marker";
             base.Price = markerPrice;
             AdditionalCharge = 1;
             base.NumberOfBlueItems = blue;

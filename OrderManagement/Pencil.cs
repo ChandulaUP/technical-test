@@ -6,13 +6,13 @@ using System.Xml.Linq;
 
 namespace OrderManagement
 {
-    class Pencil : Stationary
+    class Pencil : Stationery
     {
         public int PencilPrice = 1;
 
         public Pencil(int numberOfBluePencils, int numberOfBlackPencils, int numberOfRedPencils)
         {
-            StationaryType = "Pencil";
+            StationeryType = "Pencil";
             base.Price = PencilPrice;
             AdditionalCharge = 1;
             base.NumberOfBlueItems = numberOfBluePencils;
